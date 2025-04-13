@@ -2,6 +2,7 @@ package org.example;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,5 +18,9 @@ public class Main {
         } else {
             System.out.println("Earlier");
         }
+
+        LocalDate start = LocalDate.of(2024, 1, 1);
+        LocalDate end = LocalDate.of(2024, 12, 31);
+        System.out.println(ChronoUnit.DAYS.between(start, end));
     }
 }
